@@ -1,0 +1,28 @@
+<md-toolbar>
+  <h2 class="md-toolbar-tools">
+    <span>other toolbar</span>
+  </h2>
+</md-toolbar>
+
+<md-content layout="row" layout-wrap layout-align="center">
+  <md-card ng-repeat="card in vm.cards" flex="30">
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{card.title}}</span>
+        <span class="md-subhead">{{card.description}}</span>
+      </md-card-title-text>
+      <md-card-title-media>
+        <div class="md-media-md card-media">
+          <img ng-src="assets/images/{{ card.logo }}" alt="{{ card.title }}">
+        </div>
+      </md-card-title-media>
+    </md-card-title>
+    <md-card-actions layout="row" layout-align="start center">
+      <md-button ng-href="{{ card.url }}">Website</md-button>
+    </md-card-actions>
+  </md-card>
+</md-content>
+
+<md-button class="md-fab md-fab-bottom-right">
+  +
+</md-button>
