@@ -17,6 +17,11 @@
         controller: 'OtherController',
         controllerAs: 'vm'
       })
+      .when('/translation', {
+        templateUrl: 'app/translation/translation.html',
+        controller: 'TranslationController',
+        controllerAs: 'vm'
+      })
       .otherwise({
         redirectTo: '/'
       });
